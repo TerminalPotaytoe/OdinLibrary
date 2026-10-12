@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+    <meta name="darkreader-lock">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to my Library!</h1>
+        <button id="addBook" class="addBook">Add Book To Library</button>
+    </header>
+    <div class="library" id="library">
+    </div>
+    <div class="addingBook" hidden>
+        <form method="post" class="bookInfo">
+            <div class="field">
+                <span>Name of Book: </span>
+                <input type="text" id="bookName" placeholder="eg. Hairy poulter" required>
+            </div>
+            <div class="field">
+                <span>Author: </span>
+                <input type="text" id="authorName" placeholder="eg. Donald Trump" required>
+            </div>
+            <div class="field">
+                <span>Year: </span>
+                <input type="number" id="bookYear" min="0" max="9999" oninput="enforceMax(this)" required>
+            </div>
+            <div class="field">
+                <span>Read: </span>
+                <input type="checkbox" id="read" >
+            </div>
+            <button class="submit" type="submit">Add Book</button>
+        </form>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
